@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Home Page - Nia Ireland</title>
+    <link rel="stylesheet" type="text/css" href="/css/style.css">
+    <link rel="icon" href="./images/nia-logo-favicon.png" type="image/x-icon">
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script> 
+  </head>
+<body>
+    
+    <div class="results">
+        <h1>You are registered!</h1>
+        <p>The information you submitted has been received, thank you. We will get back to you shortly </p>
+        
+        <h3>Your submitted data:</h3>
+        
+        <div id="userdata"></div>
+        
+        <p><a href="index.html">Return to home page</a></p>
+    </div>
+    <div id="userdata"></div>
+    
+    <script>
+       const dataList = 
+       document.getElementByID("userdata")
+       new
+       URLSearchParams(window.location.search).forEach((value, name) => {
+         dataList.append(`${name}: ${value}`)
+         dataList.append(document.createElement('br'))
+       })
+       
+    </script> 
+    
+    
+</body> 
+</html>
